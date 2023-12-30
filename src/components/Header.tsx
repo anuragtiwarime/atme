@@ -1,6 +1,8 @@
 import Image from "next/image";
-import { Button } from "../ui/button";
+import { Button } from "./ui/button";
 import Link from "next/link";
+import ToggleTheme from "./ToggleTheme";
+import { AtSign } from "lucide-react";
 
 const Header = () => {
   return (
@@ -14,15 +16,10 @@ const Header = () => {
         <Button variant="secondary">Let&#39;s Talk</Button>
         <Button variant="outline" size="icon">
           <Link href="#">
-            <Image
-              className="w-8 h-8"
-              width={50}
-              height={50}
-              src="/assets/email.svg"
-              alt="email"
-            />
+            <AtSign />
           </Link>
         </Button>
+        <ToggleTheme />
       </div>
     </div>
   );
