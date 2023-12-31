@@ -1,5 +1,8 @@
 import Header from "@/components/Header";
+import Job from "@/components/Job";
+import { JobDetails } from "@/constants/constants";
 import Image from "next/image";
+import { Briefcase } from "lucide-react";
 
 export default function Home() {
   return (
@@ -32,6 +35,27 @@ export default function Home() {
             </p>
             <p>I ❤️ To Code and Teach</p>
           </div>
+        </div>
+      </section>
+
+      {/* for job section */}
+      <section className="px-60  flex items-center flex-col gap-5">
+        <div className="flex items-center gap-5">
+          <Briefcase className="w-10 h-10" />
+          <h1 className="text-4xl font-bold">Experiences</h1>
+        </div>
+        <div className="flex items-center justify-between w-full h-[350px]">
+          {JobDetails &&
+            JobDetails.map((job, index) => {
+              return (
+                <Job
+                  key={index + job?.companyName + job?.designation}
+                  jobDetails={job}
+                  index={index}
+                  lastIndex={JobDetails?.length - 1}
+                />
+              );
+            })}
         </div>
       </section>
     </main>
