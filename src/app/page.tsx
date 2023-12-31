@@ -1,8 +1,20 @@
+"use client";
+
 import Header from "@/components/Header";
 import Job from "@/components/Job";
 import { JobDetails } from "@/constants/constants";
 import Image from "next/image";
-import { Briefcase } from "lucide-react";
+import { Briefcase, MonitorPlay, UsersRound } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 
 export default function Home() {
   return (
@@ -56,6 +68,75 @@ export default function Home() {
                 />
               );
             })}
+        </div>
+      </section>
+
+      <div className="px-10">
+        <Separator />
+      </div>
+
+      {/* youtube integration section */}
+      <section className="pl-10 pr-20 flex flex-col my-10 gap-10">
+        <div className="flex items-center gap-10">
+          {/* for channel details */}
+          <div className="space-y-2 w-2/3">
+            <h1 className="text-5xl font-bold">Youtube</h1>
+            <h4 className="text-2xl font-semibold">
+              Checkout my popular videos
+            </h4>
+            <p className="text-gray-500 font-medium">
+              I would really appreciate it if you could check it out and maybe
+              even hit the subscribe button if you enjoy the content. Thanks in
+              advance!
+            </p>
+          </div>
+
+          {/* for videos and subscriber */}
+          <div className="flex flex-col gap-5 w-1/3">
+            <div className="shadow-md rounded-md p-4 flex items-center gap-5">
+              <UsersRound size={30} />
+              <p className="font-medium text-xl ">
+                100K <span className="text-gray-500">Subscribers</span>
+              </p>
+            </div>
+            <div className="shadow-md rounded-md p-4 flex items-center gap-5">
+              <MonitorPlay size={30} />
+              <p className="font-medium text-xl">
+                100 <span className="text-gray-500">videos uploaded</span>
+              </p>
+            </div>
+            <Button variant="destructive" className="text-lg" size={"lg"}>
+              Subscribe
+            </Button>
+          </div>
+        </div>
+
+        {/* for recent videos */}
+        <div className="px-10">
+          <Carousel
+            opts={{
+              align: "start",
+            }}
+            className="w-full "
+          >
+            <CarouselContent>
+              {Array.from({ length: 5 }).map((_, index) => (
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                    <Card>
+                      <CardContent className="flex aspect-square items-center justify-center p-6">
+                        <span className="text-3xl font-semibold">
+                          {index + 1}
+                        </span>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
       </section>
     </main>
