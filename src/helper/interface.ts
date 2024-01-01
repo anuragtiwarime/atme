@@ -4,3 +4,8 @@ export interface IJobDetails {
   startDate: string;
   endDate: string;
 }
+
+export interface IToolsData {
+  url: string;
+  name: string;
+}

@@ -2,9 +2,9 @@
 
 import Header from "@/components/Header";
 import Job from "@/components/Job";
-import { JobDetails } from "@/constants/constants";
+import { JobDetails, toolsData } from "@/constants/constants";
 import Image from "next/image";
-import { Briefcase, MonitorPlay, UsersRound } from "lucide-react";
+import { Briefcase, MonitorPlay, UsersRound, Wrench } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Carousel,
@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import Tool from "@/components/Tool";
 
 export default function Home() {
   return (
@@ -51,7 +52,7 @@ export default function Home() {
       </section>
 
       {/* for job section */}
-      <section className="px-60  flex items-center flex-col gap-5">
+      <section className="px-60 flex items-center flex-col gap-5">
         <div className="flex items-center gap-5">
           <Briefcase className="w-10 h-10" />
           <h1 className="text-4xl font-bold">Experiences</h1>
@@ -137,6 +138,27 @@ export default function Home() {
             <CarouselPrevious />
             <CarouselNext />
           </Carousel>
+        </div>
+      </section>
+
+      {/* tools and technolgoies */}
+      <section className="flex flex-col items-center gap-10 px-10 my-20">
+        <div className="flex items-center gap-5">
+          <Wrench className="w-10 h-10" />
+          <h1 className="text-4xl font-bold">Tools and Technologies</h1>
+        </div>
+
+        <div className="flex items-center justify-center gap-10 flex-wrap">
+          {toolsData &&
+            toolsData.map((tool) => {
+              return (
+                <Tool
+                  key={tool.name + tool.url}
+                  name={tool?.name}
+                  url={tool?.url}
+                />
+              );
+            })}
         </div>
       </section>
     </main>
