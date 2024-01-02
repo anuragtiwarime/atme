@@ -1,4 +1,4 @@
-import { IJobDetails, IToolsData } from "@/helper/interface";
+import { IJobDetails, ISocialMedia, IToolsData } from "@/helper/interface";
 
 export const JobDetails: IJobDetails[] = [
   {
@@ -84,5 +84,48 @@ export const toolsData: IToolsData[] = [
   {
     name: "Devops",
     url: "/assets/tools/devopsIcon.png",
+  },
+];
+
+export const socialMedia: ISocialMedia[] = [
+  {
+    name: "Youtube",
+    image: "/assets/social/youtube.svg",
+    link: "https://www.youtube.com/channel/UC8HuZC0pghWbpn4KrzKgRZA",
+  },
+  {
+    name: "Instagram",
+    image: "/assets/social/instagram.svg",
+    link: "https://www.instagram.com/anuragtiwari.me",
+  },
+  {
+    name: "Linkedin",
+    image: "/assets/social/linkedin-in.svg",
+    link: "https://www.linkedin.com/in/anuragtiwarime/",
+  },
+  {
+    name: "Twitter",
+    image: "/assets/social/x-twitter.svg",
+    link: "https://twitter.com/anuragtiwarime",
+  },
+  {
+    name: "Facebook",
+    image: "/assets/social/facebook-f.svg",
+    link: "https://www.facebook.com/anuragtiwari.me/",
+  },
+  {
+    name: "Discord",
+    image: "/assets/social/discord.svg",
+    link: "",
+  },
+  {
+    name: "Telegram",
+    image: "/assets/social/telegram.svg",
+    link: "",
+  },
+  {
+    name: "Whatsapp",
+    image: "/assets/social/whatsapp.svg",
+    link: "",
   },
 ];

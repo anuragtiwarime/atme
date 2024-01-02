@@ -4,7 +4,13 @@ import Header from "@/components/Header";
 import Job from "@/components/Job";
 import { JobDetails, toolsData } from "@/constants/constants";
 import Image from "next/image";
-import { Briefcase, MonitorPlay, UsersRound, Wrench } from "lucide-react";
+import {
+  Briefcase,
+  MonitorPlay,
+  SendHorizonal,
+  UsersRound,
+  Wrench,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Carousel,
@@ -16,6 +22,11 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import Tool from "@/components/Tool";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import SocialMedia from "@/components/SocialMedia";
+import ContactForm from "@/components/ui/ContactForm";
 
 export default function Home() {
   return (
@@ -81,7 +92,7 @@ export default function Home() {
         <div className="flex items-center gap-10">
           {/* for channel details */}
           <div className="space-y-2 w-2/3">
-            <h1 className="text-5xl font-bold">Youtube</h1>
+            <h1 className="text-4xl font-bold">Youtube</h1>
             <h4 className="text-2xl font-semibold">
               Checkout my popular videos
             </h4>
@@ -160,6 +171,15 @@ export default function Home() {
               );
             })}
         </div>
+      </section>
+
+      {/* connect with me section */}
+      <section className="flex items-center gap-20 justify-between px-10 mb-20">
+        {/* left section */}
+        <SocialMedia />
+
+        {/* right section */}
+        <ContactForm />
       </section>
     </main>
   );
