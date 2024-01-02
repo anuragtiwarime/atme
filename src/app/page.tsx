@@ -22,13 +22,11 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import Tool from "@/components/Tool";
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import SocialMedia from "@/components/SocialMedia";
 import ContactForm from "@/components/ui/ContactForm";
 
 export default function Home() {
+  const year = new Date().getFullYear();
   return (
     <main className="text-lg">
       <Header />
@@ -174,13 +172,21 @@ export default function Home() {
       </section>
 
       {/* connect with me section */}
-      <section className="flex items-center gap-20 justify-between px-10 mb-20">
+      <section className="flex items-center gap-20 justify-between px-10">
         {/* left section */}
         <SocialMedia />
 
         {/* right section */}
         <ContactForm />
       </section>
+
+      <div className="px-10 pt-20">
+        <Separator />
+      </div>
+
+      <footer className="px-10 text-center text-base py-5 font-medium">
+        &#169; Copyright {year} - All right reserved.
+      </footer>
     </main>
   );
 }
