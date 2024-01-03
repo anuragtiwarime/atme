@@ -15,7 +15,7 @@ const SocialMedia = () => {
               <Link
                 key={index + social?.name + social?.image}
                 href={social?.link}
-                className="hover:bg-gray-300 hover:shadow-md bg-gray-50 h-12 w-12 rounded-full flex items-center justify-center shadow-sm transition-all duration-200 ease-in-out"
+                className="hover:bg-gray-300 hover:shadow-md hover:rotate-[360deg] scale-105 bg-gray-50 h-12 w-12 rounded-full flex items-center justify-center shadow-sm transition-all duration-500 ease-in-out"
               >
                 <Image
                   src={social?.image}

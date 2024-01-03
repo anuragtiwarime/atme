@@ -4,13 +4,7 @@ import Header from "@/components/Header";
 import Job from "@/components/Job";
 import { JobDetails, toolsData } from "@/constants/constants";
 import Image from "next/image";
-import {
-  Briefcase,
-  MonitorPlay,
-  SendHorizonal,
-  UsersRound,
-  Wrench,
-} from "lucide-react";
+import { Briefcase, MonitorPlay, UsersRound, Wrench } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Carousel,
