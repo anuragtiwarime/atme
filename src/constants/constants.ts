@@ -116,16 +116,16 @@ export const socialMedia: ISocialMedia[] = [
   {
     name: "Discord",
     image: "/assets/social/discord.svg",
-    link: "",
+    link: "https://discord.gg/Umhk7UqAD3",
   },
   {
     name: "Telegram",
     image: "/assets/social/telegram.svg",
-    link: "",
+    link: "https://t.me/+Nyx8WMuj8z00MTQ1",
   },
   {
     name: "Whatsapp",
     image: "/assets/social/whatsapp.svg",
-    link: "",
+    link: "https://whatsapp.com/channel/0029VaINW8x4NVikaS1A8h47",
   },
 ];

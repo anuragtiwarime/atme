@@ -26,7 +26,7 @@ export default function Home() {
       <Header />
 
       {/* main section */}
-      <section className="px-10 flex items-center gap-20 my-10">
+      <section className="px-10 flex flex-col md:flex-row items-center gap-20 my-10">
         <Image
           className="rounded-full shadow-md"
           src="/assets/profile.jpeg"
