@@ -40,7 +40,7 @@ export default function Home() {
           <div className="space-y-2">
             <h1 className="text-6xl font-bold">Anurag Tiwari</h1>
             <h4 className="text-2xl font-semibold">
-              Coder, Mentor, and Content Creator
+              Manager | SDE - II | Mentorship | Technology Enthusiast | Speaker
             </h4>
           </div>
           <div className="space-y-2 font-medium">
@@ -58,7 +58,7 @@ export default function Home() {
       <section className="px-60 flex items-center flex-col gap-5">
         <div className="flex items-center gap-5">
           <Briefcase className="w-10 h-10" />
-          <h1 className="text-4xl font-bold">Experiences</h1>
+          <h1 className="text-4xl font-bold">Journey</h1>
         </div>
         <div className="flex items-center justify-between w-full h-[350px]">
           {JobDetails &&

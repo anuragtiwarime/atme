@@ -1,6 +1,5 @@
 import { Button } from "./ui/button";
 import Link from "next/link";
-import ToggleTheme from "./ToggleTheme";
 import { AtSign } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -33,14 +32,13 @@ const Header = () => {
       </h1>
 
       <div className="flex items-center gap-5">
-        <Button>Lecture</Button>
+        <Button>Recommendation</Button>
         <Button variant="secondary">Let&#39;s Talk</Button>
         <Button variant="outline" size="icon">
           <Link href="#">
             <AtSign />
           </Link>
         </Button>
-        <ToggleTheme />
       </div>
     </header>
   );
