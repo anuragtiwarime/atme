@@ -22,18 +22,20 @@ import ContactForm from "@/components/ui/ContactForm";
 export default function Home() {
   const year = new Date().getFullYear();
   return (
-    <main className="text-lg">
+    <main>
       <Header />
 
       {/* main section */}
       <section className="px-10 flex flex-col md:flex-row items-center gap-20 my-10">
-        <Image
-          className="rounded-full shadow-md"
-          src="/assets/profile.jpeg"
-          alt="profile"
-          width={600}
-          height={600}
-        />
+        <div className="rounded-full p-1 border-[2px] border-gray-400">
+          <Image
+            className="rounded-full"
+            src="/assets/profile.jpeg"
+            alt="profile"
+            width={600}
+            height={600}
+          />
+        </div>
 
         {/* for user description */}
         <div className="space-y-5">

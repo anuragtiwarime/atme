@@ -24,17 +24,31 @@ const Header = () => {
       }`}
     >
       <h1
-        className={`text-gray-500 text-lg font-mono border-l-4 pl-2 border-blue-500 ${
-          isScrolled ? "text-gray-700 dark:text-gray-100" : ""
+        className={`text-lg font-mono border-l-4 pl-2 border-blue-500 ${
+          isScrolled ? "text-gray-300" : "text-gray-400"
         }`}
       >
         &gt;&gt; Anurag Tiwari
       </h1>
 
       <div className="flex items-center gap-5">
-        <Button>Recommendation</Button>
-        <Button variant="secondary">Let&#39;s Talk</Button>
-        <Button variant="outline" size="icon">
+        <Button
+          variant="ghost"
+          className="shadow-md shadow-gray-500 hover:shadow-gray-400 transition-all ease-in-out duration-300"
+        >
+          Recommendation
+        </Button>
+        <Button
+          variant="ghost"
+          className="shadow-md shadow-gray-500 hover:shadow-gray-400 transition-all ease-in-out duration-300"
+        >
+          Let&#39;s Talk
+        </Button>
+        <Button
+          variant="ghost"
+          size="icon"
+          className="shadow-md shadow-gray-500 hover:shadow-gray-400 transition-all ease-in-out duration-300"
+        >
           <Link href="#">
             <AtSign />
           </Link>
