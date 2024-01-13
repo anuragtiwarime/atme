@@ -3,13 +3,15 @@ import Link from "next/link";
 import { AtSign, Menu } from "lucide-react";
 import { useEffect, useState } from "react";
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "./ui/dropdown-menu";
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "./ui/drawer";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -39,21 +41,45 @@ const Header = () => {
         &gt;&gt; Anurag Tiwari
       </h1>
 
-      <DropdownMenu>
-        <DropdownMenuTrigger>
-          <Menu />
-        </DropdownMenuTrigger>
-        <DropdownMenuContent className="">
-          <DropdownMenuLabel>My Account</DropdownMenuLabel>
-          <DropdownMenuSeparator />
-          <DropdownMenuItem>Profile</DropdownMenuItem>
-          <DropdownMenuItem>Billing</DropdownMenuItem>
-          <DropdownMenuItem>Team</DropdownMenuItem>
-          <DropdownMenuItem>Subscription</DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu>
+      <div className="block sm:hidden">
+        <Drawer>
+          <DrawerTrigger>
+            <Menu />
+          </DrawerTrigger>
+          <DrawerContent className="mx-2">
+            <DrawerHeader>
+              <Button
+                variant="ghost"
+                className="w-full flex items-center justify-start text-left shadow-sm shadow-gray-500 hover:shadow-gray-400 transition-all ease-in-out duration-300"
+              >
+                Recommendation
+              </Button>
+              <Button
+                variant="ghost"
+                className="w-full flex items-center justify-start text-left shadow-sm shadow-gray-500 hover:shadow-gray-400 transition-all ease-in-out duration-300"
+              >
+                Let&#39;s Talk
+              </Button>
+              <Button
+                variant="ghost"
+                className="w-full flex items-center justify-start text-left shadow-sm shadow-gray-500 hover:shadow-gray-400 transition-all ease-in-out duration-300"
+              >
+                Mail me @
+              </Button>
+            </DrawerHeader>
+            <DrawerFooter>
+              <DrawerClose>
+                <Button className="w-full" variant="outline">
+                  Close
+                </Button>
+              </DrawerClose>
+            </DrawerFooter>
+          </DrawerContent>
+        </Drawer>
+      </div>
 
-      <div className="flex items-center gap-5">
+      {/* buttons menu */}
+      <div className="items-center gap-5 hidden sm:flex">
         <Button
           variant="ghost"
           className="shadow-md shadow-gray-500 hover:shadow-gray-400 transition-all ease-in-out duration-300"
@@ -61,8 +87,8 @@ const Header = () => {
           Recommendation
         </Button>
         <Button
-          variant="default"
-          // className="shadow-md shadow-gray-500 hover:shadow-gray-400 transition-all ease-in-out duration-300"
+          variant="ghost"
+          className="shadow-md shadow-gray-500 hover:shadow-gray-400 transition-all ease-in-out duration-300"
         >
           Let&#39;s Talk
         </Button>
