@@ -1,7 +1,15 @@
 import { Button } from "./ui/button";
 import Link from "next/link";
-import { AtSign } from "lucide-react";
+import { AtSign, Menu } from "lucide-react";
 import { useEffect, useState } from "react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "./ui/dropdown-menu";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -31,6 +39,20 @@ const Header = () => {
         &gt;&gt; Anurag Tiwari
       </h1>
 
+      <DropdownMenu>
+        <DropdownMenuTrigger>
+          <Menu />
+        </DropdownMenuTrigger>
+        <DropdownMenuContent className="">
+          <DropdownMenuLabel>My Account</DropdownMenuLabel>
+          <DropdownMenuSeparator />
+          <DropdownMenuItem>Profile</DropdownMenuItem>
+          <DropdownMenuItem>Billing</DropdownMenuItem>
+          <DropdownMenuItem>Team</DropdownMenuItem>
+          <DropdownMenuItem>Subscription</DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
+
       <div className="flex items-center gap-5">
         <Button
           variant="ghost"
@@ -39,8 +61,8 @@ const Header = () => {
           Recommendation
         </Button>
         <Button
-          variant="ghost"
-          className="shadow-md shadow-gray-500 hover:shadow-gray-400 transition-all ease-in-out duration-300"
+          variant="default"
+          // className="shadow-md shadow-gray-500 hover:shadow-gray-400 transition-all ease-in-out duration-300"
         >
           Let&#39;s Talk
         </Button>

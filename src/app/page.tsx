@@ -45,7 +45,7 @@ export default function Home() {
               Manager | SDE - II | Mentorship | Technology Enthusiast | Speaker
             </h4>
           </div>
-          <div className="space-y-2 font-medium">
+          <div className="space-y-2 font-medium text-gray-300">
             <p>
               Lead programmer with a track record of incorporating user and
               business requirements into cost-effective, secure and
