@@ -1,4 +1,4 @@
-export interface IJobDetails {
+export interface IJourneyDetails {
   companyName: string;
   designation: string;
   startDate: string;

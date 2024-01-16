@@ -1,28 +1,46 @@
-import { IJobDetails, ISocialMedia, IToolsData } from "@/helper/interface";
+import { IJourneyDetails, ISocialMedia, IToolsData } from "@/helper/interface";
 
-export const JobDetails: IJobDetails[] = [
+export const JourneyDetails: IJourneyDetails[] = [
   {
-    companyName: "company 1",
-    designation: "role 1",
-    startDate: "Jan 2017",
-    endDate: "Dec 2018",
+    companyName: "BTech",
+    designation: "Bachelor",
+    startDate: "2016",
+    endDate: "2019",
   },
   {
-    companyName: "company 2",
-    designation: "role 2",
-    startDate: "Jan 2018",
-    endDate: "Dec 2019",
+    companyName: "IIT Bombay",
+    designation: "Internship",
+    startDate: "2017",
+    endDate: "2018",
   },
   {
-    companyName: "company 3",
-    designation: "role 3",
-    startDate: "Jan 2019",
-    endDate: "Dec 2022",
+    companyName: "AI and ML",
+    designation: "Bootcamp",
+    startDate: "2019",
+    endDate: "2019",
   },
   {
-    companyName: "company 4",
-    designation: "role 4",
-    startDate: "Jan 2022",
+    companyName: "LCO",
+    designation: "Software Developer",
+    startDate: "2019",
+    endDate: "2022",
+  },
+  {
+    companyName: "M Tech",
+    designation: "Masters",
+    startDate: "2019",
+    endDate: "2021",
+  },
+  {
+    companyName: "iNeuron",
+    designation: "Senior Software Developer",
+    startDate: "2022",
+    endDate: "2023",
+  },
+  {
+    companyName: "PW Skills",
+    designation: "Program Manager",
+    startDate: "2023",
     endDate: "Current",
   },
 ];

@@ -1,8 +1,7 @@
 "use client";
 
 import Header from "@/components/Header";
-import Job from "@/components/Job";
-import { JobDetails, toolsData } from "@/constants/constants";
+import { JourneyDetails, toolsData } from "@/constants/constants";
 import Image from "next/image";
 import { Briefcase, MonitorPlay, UsersRound, Wrench } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -18,6 +17,7 @@ import { Separator } from "@/components/ui/separator";
 import Tool from "@/components/Tool";
 import SocialMedia from "@/components/SocialMedia";
 import ContactForm from "@/components/ui/ContactForm";
+import Journey from "@/components/Journey";
 
 export default function Home() {
   const year = new Date().getFullYear();
@@ -26,7 +26,7 @@ export default function Home() {
       <Header />
 
       {/* main section */}
-      <section className="px-10 flex flex-col md:flex-row items-center gap-20 my-10">
+      <section className="px-5 md:px-10 flex flex-col md:flex-row items-center gap-10 md:gap-20 my-5 md:my-10">
         <div className="rounded-full p-1 border-[2px] border-gray-400">
           <Image
             className="rounded-full"
@@ -40,12 +40,12 @@ export default function Home() {
         {/* for user description */}
         <div className="space-y-5">
           <div className="space-y-2">
-            <h1 className="text-6xl font-bold">Anurag Tiwari</h1>
-            <h4 className="text-2xl font-semibold">
+            <h1 className="text-4xl sm:text-6xl font-bold">Anurag Tiwari</h1>
+            <h4 className="text-lg sm:text-2xl font-semibold">
               Manager | SDE - II | Mentorship | Technology Enthusiast | Speaker
             </h4>
           </div>
-          <div className="space-y-2 font-medium text-gray-300">
+          <div className="space-y-2 font-medium text-gray-300 text-sm sm:text-base">
             <p>
               Lead programmer with a track record of incorporating user and
               business requirements into cost-effective, secure and
@@ -56,28 +56,28 @@ export default function Home() {
         </div>
       </section>
 
-      {/* for job section */}
-      <section className="px-60 flex items-center flex-col gap-5">
-        <div className="flex items-center gap-5">
-          <Briefcase className="w-10 h-10" />
-          <h1 className="text-4xl font-bold">Journey</h1>
+      {/* for journey section */}
+      <section className="px-40 flex items-center flex-col gap-5">
+        <div className="flex items-center gap-3 md:gap-5">
+          <Briefcase className="w-6 h-6 sm:w-10 sm:h-10" />
+          <h1 className="text-2xl md:text-4xl font-bold">Journey</h1>
         </div>
-        <div className="flex items-center justify-between w-full h-[350px]">
-          {JobDetails &&
-            JobDetails.map((job, index) => {
+        <div className="flex flex-col md:flex-row items-center justify-between w-full h-[600px] md:h-[320px] mt-10 mb-20 md:mt-0 md:mb-0">
+          {JourneyDetails &&
+            JourneyDetails.map((job, index) => {
               return (
-                <Job
+                <Journey
                   key={index + job?.companyName + job?.designation}
-                  jobDetails={job}
+                  journeyDetails={job}
                   index={index}
-                  lastIndex={JobDetails?.length - 1}
+                  lastIndex={JourneyDetails?.length - 1}
                 />
               );
             })}
         </div>
       </section>
 
-      <div className="px-10">
+      <div className="px-5 md:px-10">
         <Separator />
       </div>
 

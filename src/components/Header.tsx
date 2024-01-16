@@ -6,10 +6,8 @@ import {
   Drawer,
   DrawerClose,
   DrawerContent,
-  DrawerDescription,
   DrawerFooter,
   DrawerHeader,
-  DrawerTitle,
   DrawerTrigger,
 } from "./ui/drawer";
 
@@ -29,7 +27,7 @@ const Header = () => {
 
   return (
     <header
-      className={`flex items-center justify-between px-10 py-5 ${
+      className={`flex items-center justify-between px-5 md:px-10 py-5 ${
         isScrolled ? "sticky top-0 z-50 backdrop-blur-lg" : ""
       }`}
     >
