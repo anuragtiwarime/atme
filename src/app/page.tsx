@@ -37,8 +37,8 @@ export default function Home() {
       youtubeVideoData && setYoutubeVideoData([...youtubeVideoData]);
       const stats = await getYoutubeStats();
       setStats({
-        videoCount: Number(stats?.videoCount),
-        subscriberCount: Number(stats?.subscriberCount),
+        videoCount: Number(stats?.videoCount) || 0,
+        subscriberCount: Number(stats?.subscriberCount) || 0,
       });
     })();
   }, []);
@@ -124,13 +124,13 @@ export default function Home() {
             <div className="shadow-md shadow-gray-800 rounded-md p-2 flex items-center gap-5">
               <UsersRound size={25} />
               <p className="font-medium text-lg">
-                {stats?.videoCount} Subscribers
+                {stats?.subscriberCount} Subscribers
               </p>
             </div>
             <div className="shadow-md shadow-gray-800 rounded-md p-2 flex items-center gap-5">
               <MonitorPlay size={25} />
               <p className="font-medium text-lg">
-                {stats?.subscriberCount} videos uploaded
+                {stats?.videoCount} videos uploaded
               </p>
             </div>
             <Button variant="destructive" className="text-lg" size={"lg"}>
