@@ -2,14 +2,14 @@ import { IJourneyDetails, ISocialMedia, IToolsData } from "@/helper/interface";
 
 export const JourneyDetails: IJourneyDetails[] = [
   {
-    companyName: "BTech",
-    designation: "Bachelor",
+    companyName: "Bachelor",
+    designation: "Student",
     startDate: "2016",
     endDate: "2019",
   },
   {
     companyName: "IIT Bombay",
-    designation: "Internship",
+    designation: "Certification",
     startDate: "2017",
     endDate: "2018",
   },
@@ -26,8 +26,8 @@ export const JourneyDetails: IJourneyDetails[] = [
     endDate: "2022",
   },
   {
-    companyName: "M Tech",
-    designation: "Masters",
+    companyName: "Masters",
+    designation: "Student",
     startDate: "2019",
     endDate: "2021",
   },

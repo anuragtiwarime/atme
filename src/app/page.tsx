@@ -12,15 +12,38 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import Tool from "@/components/Tool";
 import SocialMedia from "@/components/SocialMedia";
 import ContactForm from "@/components/ui/ContactForm";
 import Journey from "@/components/Journey";
+import { fetchYoutubeVideos, getYoutubeStats } from "@/helper/youtube";
+import { useEffect, useState } from "react";
+import { IYoutubeVideoData } from "@/helper/interface";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export default function Home() {
   const year = new Date().getFullYear();
+  const [youtubeVideoData, setYoutubeVideoData] = useState<IYoutubeVideoData[]>(
+    []
+  );
+  const [stats, setStats] = useState({
+    videoCount: 0,
+    subscriberCount: 0,
+  });
+  useEffect(() => {
+    (async () => {
+      const youtubeVideoData = await fetchYoutubeVideos();
+      youtubeVideoData && setYoutubeVideoData([...youtubeVideoData]);
+      const stats = await getYoutubeStats();
+      setStats({
+        videoCount: Number(stats?.videoCount),
+        subscriberCount: Number(stats?.subscriberCount),
+      });
+    })();
+  }, []);
+
   return (
     <main>
       <Header />
@@ -99,16 +122,16 @@ export default function Home() {
 
           {/* for videos and subscriber */}
           <div className="flex flex-col gap-5 w-1/3">
-            <div className="shadow-md rounded-md p-4 flex items-center gap-5">
-              <UsersRound size={30} />
-              <p className="font-medium text-xl ">
-                100K <span className="text-gray-500">Subscribers</span>
+            <div className="shadow-md shadow-gray-400 rounded-md p-2 flex items-center gap-5">
+              <UsersRound size={25} />
+              <p className="font-medium text-lg">
+                {stats?.videoCount} Subscribers
               </p>
             </div>
-            <div className="shadow-md rounded-md p-4 flex items-center gap-5">
-              <MonitorPlay size={30} />
-              <p className="font-medium text-xl">
-                100 <span className="text-gray-500">videos uploaded</span>
+            <div className="shadow-md shadow-gray-400 rounded-md p-2 flex items-center gap-5">
+              <MonitorPlay size={25} />
+              <p className="font-medium text-lg">
+                {stats?.subscriberCount} videos uploaded
               </p>
             </div>
             <Button variant="destructive" className="text-lg" size={"lg"}>
@@ -126,19 +149,42 @@ export default function Home() {
             className="w-full "
           >
             <CarouselContent>
-              {Array.from({ length: 5 }).map((_, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-1">
-                    <Card>
-                      <CardContent className="flex aspect-square items-center justify-center p-6">
-                        <span className="text-3xl font-semibold">
-                          {index + 1}
-                        </span>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </CarouselItem>
-              ))}
+              {youtubeVideoData.length === 0
+                ? Array.from({ length: 5 }).map((_, index) => (
+                    <CarouselItem
+                      key={index}
+                      className="md:basis-1/2 lg:basis-1/3"
+                    >
+                      <div className="p-1">
+                        <Skeleton className="w-full h-60" />
+                      </div>
+                    </CarouselItem>
+                  ))
+                : youtubeVideoData.map((video: IYoutubeVideoData) => {
+                    return (
+                      <CarouselItem
+                        key={video?.publishTime + video?.publishedAt}
+                        className="md:basis-1/2 lg:basis-1/3"
+                      >
+                        <Card className="h-[17rem]">
+                          <CardContent className="aspect-square p-4">
+                            <div className="space-y-3">
+                              <Image
+                                className="rounded-md"
+                                src={video?.thumbnails?.medium?.url}
+                                width={video?.thumbnails?.medium?.width}
+                                height={video?.thumbnails?.medium?.height}
+                                alt="youtube video"
+                              />
+                              <h4 className="font-medium line-clamp-2">
+                                {video?.title}
+                              </h4>
+                            </div>
+                          </CardContent>
+                        </Card>
+                      </CarouselItem>
+                    );
+                  })}
             </CarouselContent>
             <CarouselPrevious />
             <CarouselNext />
