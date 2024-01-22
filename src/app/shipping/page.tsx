@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const Shipping = () => {
   return (
@@ -31,12 +32,22 @@ const Shipping = () => {
 
       <h3 className="text-xl font-semibold mb-2">Contact Information</h3>
 
-      <Button
-        variant="ghost"
-        className="w-fit flex items-center justify-start text-left shadow-sm shadow-gray-700 hover:shadow-gray-800 transition-all ease-in-out duration-300"
-      >
-        Mail me @
-      </Button>
+      <div className="flex items-center gap-5">
+        <Button
+          variant="ghost"
+          className="w-fit flex items-center justify-start text-left shadow-sm shadow-gray-700 hover:shadow-gray-800 transition-all ease-in-out duration-300"
+        >
+          Mail me @
+        </Button>
+        <Link href={"/"}>
+          <Button
+            variant="ghost"
+            className="w-fit flex items-center justify-start text-left shadow-sm shadow-gray-700 hover:shadow-gray-800 transition-all ease-in-out duration-300"
+          >
+            Back to homepage
+          </Button>
+        </Link>
+      </div>
     </div>
   );
 };

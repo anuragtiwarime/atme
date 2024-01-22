@@ -253,8 +253,27 @@ export default function Home() {
         <Separator />
       </div>
 
-      <footer className="px-10 text-center text-base py-5 font-medium">
-        &#169; Copyright {year} - All right reserved.
+      <footer className="px-10 text-center text-base py-5 font-medium flex items-center justify-between gap-10">
+        <div>
+          <p> &#169; Copyright {year} - All right reserved.</p>
+        </div>
+        <ul className="flex items-center gap-5">
+          <li>
+            <Link href="/contact">Contact</Link>
+          </li>
+          <li>
+            <Link href="/shipping">Shipping</Link>
+          </li>
+          <li>
+            <Link href="/cancellation">Cancellation</Link>
+          </li>
+          <li>
+            <Link href="/privacy-policy">Privacy & Policy</Link>
+          </li>
+          <li>
+            <Link href="/terms-and-conditions">Terms and Conditions</Link>
+          </li>
+        </ul>
       </footer>
     </main>
   );

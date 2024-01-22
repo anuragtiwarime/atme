@@ -1,3 +1,6 @@
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+
 const TermsAndConditions = () => {
   return (
     <div className="container mx-auto p-4">
@@ -53,6 +56,23 @@ const TermsAndConditions = () => {
         this license, you must destroy any downloaded materials in your
         possession whether in electronic or printed format.
       </p>
+
+      <div className="flex items-center gap-5">
+        <Button
+          variant="ghost"
+          className="w-fit flex items-center justify-start text-left shadow-sm shadow-gray-700 hover:shadow-gray-800 transition-all ease-in-out duration-300"
+        >
+          Mail me @
+        </Button>
+        <Link href={"/"}>
+          <Button
+            variant="ghost"
+            className="w-fit flex items-center justify-start text-left shadow-sm shadow-gray-700 hover:shadow-gray-800 transition-all ease-in-out duration-300"
+          >
+            Back to homepage
+          </Button>
+        </Link>
+      </div>
     </div>
   );
 };
