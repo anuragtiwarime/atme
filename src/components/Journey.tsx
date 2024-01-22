@@ -24,7 +24,7 @@ const Journey = ({ journeyDetails, index, lastIndex }: IProp) => {
               index % 2 === 0
                 ? "left-5 md:left-0 md:top-10"
                 : "right-5 md:right-0 md:bottom-10"
-            } w-28 sm:w-32 md:w-52 md:left-1/2 transform md:-translate-x-1/2 -translate-y-1/2 md:-translate-y-0 shadow-md shadow-gray-400 p-2 rounded-md`}
+            } w-28 sm:w-32 md:w-52 md:left-1/2 transform md:-translate-x-1/2 -translate-y-1/2 md:-translate-y-0 shadow-md shadow-gray-800 p-2 rounded-md`}
           >
             <h2 className="font-bold">{journeyDetails?.companyName}</h2>
             <h5 className="font-semibold text-sm">

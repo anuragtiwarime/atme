@@ -4,7 +4,7 @@ import { IToolsData } from "@/helper/interface";
 
 const Tool = ({ url, name }: IToolsData) => {
   return (
-    <div className="relative group w-32 h-32 p-4 shadow-md rounded-md flex flex-col items-center justify-between hover:-translate-y-4 transition-all ease-in-out duration-200">
+    <div className="relative group w-32 h-32 p-4 shadow-md shadow-gray-800 rounded-md flex flex-col items-center justify-between hover:-translate-y-4 transition-all ease-in-out duration-200">
       {/* for waving hand */}
       <Image
         src="/assets/waveHand.gif"

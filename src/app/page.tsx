@@ -1,7 +1,7 @@
 "use client";
 
 import Header from "@/components/Header";
-import { JourneyDetails, toolsData } from "@/constants/constants";
+import { JourneyDetails, socialMedia, toolsData } from "@/constants/constants";
 import Image from "next/image";
 import { Briefcase, MonitorPlay, UsersRound, Wrench } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -15,13 +15,12 @@ import {
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import Tool from "@/components/Tool";
-import SocialMedia from "@/components/SocialMedia";
-import ContactForm from "@/components/ui/ContactForm";
 import Journey from "@/components/Journey";
 import { fetchYoutubeVideos, getYoutubeStats } from "@/helper/youtube";
 import { useEffect, useState } from "react";
 import { IYoutubeVideoData } from "@/helper/interface";
 import { Skeleton } from "@/components/ui/skeleton";
+import Link from "next/link";
 
 export default function Home() {
   const year = new Date().getFullYear();
@@ -122,13 +121,13 @@ export default function Home() {
 
           {/* for videos and subscriber */}
           <div className="flex flex-col gap-5 w-1/3">
-            <div className="shadow-md shadow-gray-400 rounded-md p-2 flex items-center gap-5">
+            <div className="shadow-md shadow-gray-800 rounded-md p-2 flex items-center gap-5">
               <UsersRound size={25} />
               <p className="font-medium text-lg">
                 {stats?.videoCount} Subscribers
               </p>
             </div>
-            <div className="shadow-md shadow-gray-400 rounded-md p-2 flex items-center gap-5">
+            <div className="shadow-md shadow-gray-800 rounded-md p-2 flex items-center gap-5">
               <MonitorPlay size={25} />
               <p className="font-medium text-lg">
                 {stats?.subscriberCount} videos uploaded
@@ -214,12 +213,40 @@ export default function Home() {
       </section>
 
       {/* connect with me section */}
-      <section className="flex items-center gap-20 justify-between px-10">
-        {/* left section */}
-        <SocialMedia />
+      <section className="flex items-center gap-10 justify-between px-10">
+        <div className="w-1/2 space-y-5">
+          <h1 className="text-4xl font-bold">Connect with me</h1>
+          {/* social media icon */}
+          <div className="flex items-center flex-wrap gap-5">
+            {socialMedia &&
+              socialMedia.map((social, index) => {
+                return (
+                  <Link
+                    key={index + social?.name + social?.image}
+                    href={social?.link}
+                    className="hover:bg-gray-300 hover:shadow-md hover:rotate-[360deg] scale-105 bg-gray-50 h-12 w-12 rounded-full flex items-center justify-center shadow-sm transition-all duration-500 ease-in-out"
+                  >
+                    <Image
+                      src={social?.image}
+                      alt={social?.name}
+                      width={50}
+                      height={50}
+                      className="w-7 h-7"
+                    />
+                  </Link>
+                );
+              })}
+          </div>
+        </div>
 
-        {/* right section */}
-        <ContactForm />
+        {/* adding the newsletter */}
+        <iframe
+          className="rounded-md"
+          src="https://anuragtiwari.substack.com/embed"
+          width="50%"
+          height="150"
+          style={{ border: "1px solid #EEE", background: "white" }}
+        />
       </section>
 
       <div className="px-10 pt-20">

@@ -48,19 +48,19 @@ const Header = () => {
             <DrawerHeader>
               <Button
                 variant="ghost"
-                className="w-full flex items-center justify-start text-left shadow-sm shadow-gray-500 hover:shadow-gray-400 transition-all ease-in-out duration-300"
+                className="w-full flex items-center justify-start text-left shadow-sm shadow-gray-700 hover:shadow-gray-800 transition-all ease-in-out duration-300"
               >
                 Recommendation
               </Button>
               <Button
                 variant="ghost"
-                className="w-full flex items-center justify-start text-left shadow-sm shadow-gray-500 hover:shadow-gray-400 transition-all ease-in-out duration-300"
+                className="w-full flex items-center justify-start text-left shadow-sm shadow-gray-700 hover:shadow-gray-800 transition-all ease-in-out duration-300"
               >
                 Let&#39;s Talk
               </Button>
               <Button
                 variant="ghost"
-                className="w-full flex items-center justify-start text-left shadow-sm shadow-gray-500 hover:shadow-gray-400 transition-all ease-in-out duration-300"
+                className="w-full flex items-center justify-start text-left shadow-sm shadow-gray-700 hover:shadow-gray-800 transition-all ease-in-out duration-300"
               >
                 Mail me @
               </Button>
@@ -80,20 +80,20 @@ const Header = () => {
       <div className="items-center gap-5 hidden sm:flex">
         <Button
           variant="ghost"
-          className="shadow-md shadow-gray-500 hover:shadow-gray-400 transition-all ease-in-out duration-300"
+          className="shadow-md shadow-gray-500 hover:shadow-gray-800 transition-all ease-in-out duration-300"
         >
           Recommendation
         </Button>
         <Button
           variant="ghost"
-          className="shadow-md shadow-gray-500 hover:shadow-gray-400 transition-all ease-in-out duration-300"
+          className="shadow-md shadow-gray-500 hover:shadow-gray-800 transition-all ease-in-out duration-300"
         >
           Let&#39;s Talk
         </Button>
         <Button
           variant="ghost"
           size="icon"
-          className="shadow-md shadow-gray-500 hover:shadow-gray-400 transition-all ease-in-out duration-300"
+          className="shadow-md shadow-gray-500 hover:shadow-gray-800 transition-all ease-in-out duration-300"
         >
           <Link href="#">
             <AtSign />
