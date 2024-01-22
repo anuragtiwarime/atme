@@ -104,10 +104,10 @@ export default function Home() {
       </div>
 
       {/* youtube integration section */}
-      <section className="pl-10 pr-20 flex flex-col my-10 gap-10">
-        <div className="flex items-center gap-10">
+      <section className="px-5 md:px-10 flex flex-col my-10 gap-10">
+        <div className="flex flex-col md:flex-row items-center gap-20">
           {/* for channel details */}
-          <div className="space-y-2 w-2/3">
+          <div className="space-y-2 md:w-2/3">
             <h1 className="text-4xl font-bold">Youtube</h1>
             <h4 className="text-2xl font-semibold">
               Checkout my popular videos
@@ -120,7 +120,7 @@ export default function Home() {
           </div>
 
           {/* for videos and subscriber */}
-          <div className="flex flex-col gap-5 w-1/3">
+          <div className="flex flex-col gap-5 md:w-1/3">
             <div className="shadow-md shadow-gray-800 rounded-md p-2 flex items-center gap-5">
               <UsersRound size={25} />
               <p className="font-medium text-lg">
