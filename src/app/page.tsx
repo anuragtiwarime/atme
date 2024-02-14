@@ -1,7 +1,12 @@
 "use client";
 
 import Header from "@/components/Header";
-import { JourneyDetails, socialMedia, toolsData } from "@/constants/constants";
+import {
+  JourneyDetails,
+  moreAboutSection,
+  socialMedia,
+  toolsData,
+} from "@/constants/constants";
 import Image from "next/image";
 import { Briefcase, MonitorPlay, UsersRound, Wrench } from "lucide-react";
 import {
@@ -78,6 +83,42 @@ export default function Home() {
         </div>
       </section>
 
+      <div className="px-5 md:px-10">
+        <Separator />
+      </div>
+
+      {/* let connect section */}
+      <section className="px-10 my-10 space-y-20">
+        <div className="space-y-5">
+          <h1 className="text-4xl font-bold text-center">Connect with me on</h1>
+          <p className="text-center font-serif">
+            Let&apos;s build a community of like-minded individuals! let&apos;s
+            connect and grow together!
+          </p>
+        </div>
+        <div className="flex items-center justify-center gap-20">
+          {socialMedia.map((social, index) => {
+            return (
+              <div
+                key={index}
+                className="bg-white rounded-full relative w-20 h-20 shadow-sm cursor-pointer shadow-gray-500 hover:scale-[1.05] hover:shadow-gray-300 transition-all ease-in-out duration-300"
+              >
+                <Image
+                  src={social?.image}
+                  alt={social?.name}
+                  fill
+                  className="p-5"
+                />
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      <div className="px-5 md:px-10 my-10">
+        <Separator />
+      </div>
+
       {/* for journey section */}
       <section className="px-40 flex items-center flex-col gap-5">
         <div className="flex items-center gap-3 md:gap-5">
@@ -97,6 +138,31 @@ export default function Home() {
               );
             })}
         </div>
+      </section>
+
+      <div className="px-5 md:px-10">
+        <Separator />
+      </div>
+
+      {/* for more details */}
+      <section className="px-5 md:px-10 flex my-10 gap-10">
+        {moreAboutSection.map((more, index) => {
+          return (
+            <div
+              key={index}
+              className="flex flex-col gap-3 justify-center items-center shadow-md shadow-gray-800 p-5 rounded-2xl"
+            >
+              <Image
+                src={more.icon}
+                alt={more.heading}
+                width={50}
+                height={50}
+              />
+              <h1 className="text-2xl font-medium">{more?.heading}</h1>
+              <p>{more?.para}</p>
+            </div>
+          );
+        })}
       </section>
 
       <div className="px-5 md:px-10">
@@ -213,43 +279,6 @@ export default function Home() {
               );
             })}
         </div>
-      </section>
-
-      {/* connect with me section */}
-      <section className="flex items-center gap-10 justify-between px-10">
-        <div className="w-1/2 space-y-5">
-          <h1 className="text-4xl font-bold">Connect with me</h1>
-          {/* social media icon */}
-          <div className="flex items-center flex-wrap gap-5">
-            {socialMedia &&
-              socialMedia.map((social, index) => {
-                return (
-                  <Link
-                    key={index + social?.name + social?.image}
-                    href={social?.link}
-                    className="hover:bg-gray-300 hover:shadow-md hover:rotate-[360deg] scale-105 bg-gray-50 h-12 w-12 rounded-full flex items-center justify-center shadow-sm transition-all duration-500 ease-in-out"
-                  >
-                    <Image
-                      src={social?.image}
-                      alt={social?.name}
-                      width={50}
-                      height={50}
-                      className="w-7 h-7"
-                    />
-                  </Link>
-                );
-              })}
-          </div>
-        </div>
-
-        {/* adding the newsletter */}
-        <iframe
-          className="rounded-md"
-          src="https://anuragtiwari.substack.com/embed"
-          width="50%"
-          height="150"
-          style={{ border: "1px solid #EEE", background: "white" }}
-        />
       </section>
 
       <div className="px-10 pt-20">

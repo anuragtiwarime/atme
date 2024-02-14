@@ -107,9 +107,9 @@ export const toolsData: IToolsData[] = [
 
 export const socialMedia: ISocialMedia[] = [
   {
-    name: "Youtube",
-    image: "/assets/social/youtube.svg",
-    link: "https://www.youtube.com/channel/UC8HuZC0pghWbpn4KrzKgRZA",
+    name: "Linkedin",
+    image: "/assets/social/linkedin-in.svg",
+    link: "https://www.linkedin.com/in/anuragtiwarime/",
   },
   {
     name: "Instagram",
@@ -117,19 +117,9 @@ export const socialMedia: ISocialMedia[] = [
     link: "https://www.instagram.com/anuragtiwari.me",
   },
   {
-    name: "Linkedin",
-    image: "/assets/social/linkedin-in.svg",
-    link: "https://www.linkedin.com/in/anuragtiwarime/",
-  },
-  {
     name: "Twitter",
     image: "/assets/social/x-twitter.svg",
     link: "https://twitter.com/anuragtiwarime",
-  },
-  {
-    name: "Facebook",
-    image: "/assets/social/facebook-f.svg",
-    link: "https://www.facebook.com/anuragtiwari.me/",
   },
   {
     name: "Discord",
@@ -137,13 +127,36 @@ export const socialMedia: ISocialMedia[] = [
     link: "https://discord.gg/Umhk7UqAD3",
   },
   {
+    name: "Whatsapp",
+    image: "/assets/social/whatsapp.svg",
+    link: "https://whatsapp.com/channel/0029VaINW8x4NVikaS1A8h47",
+  },
+  {
     name: "Telegram",
     image: "/assets/social/telegram.svg",
     link: "https://t.me/+Nyx8WMuj8z00MTQ1",
   },
+];
+
+export const moreAboutSection = [
   {
-    name: "Whatsapp",
-    image: "/assets/social/whatsapp.svg",
-    link: "https://whatsapp.com/channel/0029VaINW8x4NVikaS1A8h47",
+    icon: "/assets/tools/htmlIcon.png",
+    heading: "let me know this",
+    para: "ok let me do this ok let me do this ok let me do thisok let me do thisok let me do this ok let me do this ok let me do this",
+  },
+  {
+    icon: "/assets/tools/htmlIcon.png",
+    heading: "let me know this",
+    para: "ok let me do this ok let me do this ok let me do thisok let me do thisok let me do this ok let me do this ok let me do this",
+  },
+  {
+    icon: "/assets/tools/htmlIcon.png",
+    heading: "let me know this",
+    para: "ok let me do this ok let me do this ok let me do thisok let me do thisok let me do this ok let me do this ok let me do this",
+  },
+  {
+    icon: "/assets/tools/htmlIcon.png",
+    heading: "let me know this",
+    para: "ok let me do this ok let me do this ok let me do thisok let me do thisok let me do this ok let me do this ok let me do this",
   },
 ];

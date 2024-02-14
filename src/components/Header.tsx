@@ -56,17 +56,17 @@ const Header = () => {
             <Menu />
           </DrawerTrigger>
           <DrawerContent className="mx-2">
-            <DrawerHeader>
-              <Button
-                variant="ghost"
-                className="w-full flex items-center justify-start text-left shadow-sm shadow-gray-700 hover:shadow-gray-800 transition-all ease-in-out duration-300"
-              >
+            <DrawerHeader className="space-y-2">
+              <Button variant="outline" className="flex justify-start">
+                Blogs
+              </Button>
+              <Button variant="outline" className="flex justify-start">
                 Recommendation
               </Button>
               <Button
                 onClick={test}
-                variant="ghost"
-                className="w-full flex items-center justify-start text-left shadow-sm shadow-gray-700 hover:shadow-gray-800 transition-all ease-in-out duration-300"
+                variant="outline"
+                className="flex justify-start"
               >
                 Let&#39;s Talk
               </Button>
@@ -74,15 +74,15 @@ const Header = () => {
               <Button
                 type="button"
                 onClick={handleMail}
-                variant="ghost"
-                className="w-full flex items-center justify-start text-left shadow-sm shadow-gray-700 hover:shadow-gray-800 transition-all ease-in-out duration-300"
+                variant="outline"
+                className="flex justify-start"
               >
                 Mail me @
               </Button>
             </DrawerHeader>
             <DrawerFooter>
               <DrawerClose>
-                <Button className="w-full" variant="outline">
+                <Button className="w-full" variant="secondary">
                   Close
                 </Button>
               </DrawerClose>
@@ -93,23 +93,15 @@ const Header = () => {
 
       {/* buttons menu */}
       <div className="items-center gap-5 hidden sm:flex">
+        <Button variant="secondary">Blogs</Button>
         <Button
-          variant="ghost"
-          className="shadow-md shadow-gray-500 hover:shadow-gray-800 transition-all ease-in-out duration-300"
+          variant="outline"
+          // className="bg-gradient-to-r from-red-500 to-purple-800 border-transparent transform hover:border-white transition-transform duration-300 ease-in-out text-white"
         >
           Recommendation
         </Button>
-        <Button
-          variant="ghost"
-          className="shadow-md shadow-gray-500 hover:shadow-gray-800 transition-all ease-in-out duration-300"
-        >
-          Let&#39;s Talk
-        </Button>
-        <Button
-          variant="ghost"
-          size="icon"
-          className="shadow-md shadow-gray-500 hover:shadow-gray-800 transition-all ease-in-out duration-300"
-        >
+        <Button variant="outline">Let&#39;s Talk</Button>
+        <Button variant="outline" size="icon">
           <Link href="#">
             <AtSign />
           </Link>
