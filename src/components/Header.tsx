@@ -10,9 +10,21 @@ import {
   DrawerHeader,
   DrawerTrigger,
 } from "./ui/drawer";
+import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const router = useRouter();
+
+  const handleMail = () => {
+    console.log("working");
+    router.push("mailto:anuragtiwari.me@gmail.com");
+  };
+
+  const test = () => {
+    console.log("test");
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,13 +43,12 @@ const Header = () => {
         isScrolled ? "sticky top-0 z-50 backdrop-blur-lg" : ""
       }`}
     >
-      <h1
-        className={`text-lg font-mono border-l-4 pl-2 border-blue-500 ${
-          isScrolled ? "text-gray-300" : "text-gray-400"
-        }`}
-      >
-        &gt;&gt; Anurag Tiwari
-      </h1>
+      <Image
+        src="/assets/logoWhite.png"
+        alt="anurag tiwari"
+        width={150}
+        height={50}
+      />
 
       <div className="block sm:hidden">
         <Drawer>
@@ -53,12 +64,16 @@ const Header = () => {
                 Recommendation
               </Button>
               <Button
+                onClick={test}
                 variant="ghost"
                 className="w-full flex items-center justify-start text-left shadow-sm shadow-gray-700 hover:shadow-gray-800 transition-all ease-in-out duration-300"
               >
                 Let&#39;s Talk
               </Button>
+
               <Button
+                type="button"
+                onClick={handleMail}
                 variant="ghost"
                 className="w-full flex items-center justify-start text-left shadow-sm shadow-gray-700 hover:shadow-gray-800 transition-all ease-in-out duration-300"
               >

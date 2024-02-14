@@ -45,3 +45,8 @@
     @apply bg-background text-foreground;
   }
 }
+
+body {
+  max-width: 1440px;
+  margin: auto;
+}

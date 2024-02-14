@@ -4,7 +4,6 @@ import Header from "@/components/Header";
 import { JourneyDetails, socialMedia, toolsData } from "@/constants/constants";
 import Image from "next/image";
 import { Briefcase, MonitorPlay, UsersRound, Wrench } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import {
   Carousel,
   CarouselContent,
@@ -12,7 +11,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import Tool from "@/components/Tool";
 import Journey from "@/components/Journey";
@@ -31,6 +30,7 @@ export default function Home() {
     videoCount: 0,
     subscriberCount: 0,
   });
+
   useEffect(() => {
     (async () => {
       const youtubeVideoData = await fetchYoutubeVideos();
@@ -133,9 +133,12 @@ export default function Home() {
                 {stats?.videoCount} videos uploaded
               </p>
             </div>
-            <Button variant="destructive" className="text-lg" size={"lg"}>
-              Subscribe
-            </Button>
+            <div
+              className="g-ytsubscribe w-60"
+              data-channelid="UC8HuZC0pghWbpn4KrzKgRZA"
+              data-layout="default"
+              data-count="hidden"
+            />
           </div>
         </div>
 
