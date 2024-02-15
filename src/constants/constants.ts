@@ -140,23 +140,23 @@ export const socialMedia: ISocialMedia[] = [
 
 export const moreAboutSection = [
   {
-    icon: "/assets/tools/htmlIcon.png",
-    heading: "let me know this",
+    icon: "/assets/moreDetails/strategist.png",
+    heading: "Strategist",
+    para: "As a product/program manager, ensuring product-market fit is my primary responsibility, meticulously crafting strategies and plans to guarantee they meet the highest standards.",
+  },
+  {
+    icon: "/assets/moreDetails/publicSpeaker.png",
+    heading: "Speaker",
     para: "ok let me do this ok let me do this ok let me do thisok let me do thisok let me do this ok let me do this ok let me do this",
   },
   {
-    icon: "/assets/tools/htmlIcon.png",
-    heading: "let me know this",
-    para: "ok let me do this ok let me do this ok let me do thisok let me do thisok let me do this ok let me do this ok let me do this",
+    icon: "/assets/moreDetails/youtuber.png",
+    heading: "Youtube",
+    para: "Occasionally, I create YouTube videos covering various programming topics and disseminate valuable information about engineering to my audience.",
   },
   {
-    icon: "/assets/tools/htmlIcon.png",
-    heading: "let me know this",
-    para: "ok let me do this ok let me do this ok let me do thisok let me do thisok let me do this ok let me do this ok let me do this",
-  },
-  {
-    icon: "/assets/tools/htmlIcon.png",
-    heading: "let me know this",
-    para: "ok let me do this ok let me do this ok let me do thisok let me do thisok let me do this ok let me do this ok let me do this",
+    icon: "/assets/moreDetails/techEnthusiast.png",
+    heading: "Tech Enthusiast",
+    para: "Enthusiastically coding, I stay updated on the latest tech trends, mastering new languages and market developments to continuously expand my expertise.",
   },
 ];

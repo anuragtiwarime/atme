@@ -36,6 +36,7 @@ export default function Home() {
     subscriberCount: 0,
   });
 
+  // getting youtube videos data
   useEffect(() => {
     (async () => {
       const youtubeVideoData = await fetchYoutubeVideos();
@@ -83,6 +84,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* adding the seprator */}
       <div className="px-5 md:px-10">
         <Separator />
       </div>
@@ -115,6 +117,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* adding the seprator */}
       <div className="px-5 md:px-10 my-10">
         <Separator />
       </div>
@@ -140,31 +143,70 @@ export default function Home() {
         </div>
       </section>
 
+      {/* adding the seprator */}
       <div className="px-5 md:px-10">
         <Separator />
       </div>
 
       {/* for more details */}
-      <section className="px-5 md:px-10 flex my-10 gap-10">
+      <section className="px-5 md:px-10 flex flex-col md:flex-row my-10 gap-10">
         {moreAboutSection.map((more, index) => {
           return (
             <div
               key={index}
-              className="flex flex-col gap-3 justify-center items-center shadow-md shadow-gray-800 p-5 rounded-2xl"
+              className="flex flex-col flex-1 self-stretch gap-3 shadow-md shadow-gray-800 p-5 rounded-2xl"
             >
-              <Image
-                src={more.icon}
-                alt={more.heading}
-                width={50}
-                height={50}
-              />
-              <h1 className="text-2xl font-medium">{more?.heading}</h1>
+              <div className="relative w-28 h-28 rounded-full bg-gray-50 self-center">
+                <Image
+                  src={more.icon}
+                  alt={more.heading}
+                  fill
+                  className="object-contain p-5"
+                />
+              </div>
+              <h1 className="text-2xl text-left font-medium">
+                {more?.heading}
+              </h1>
               <p>{more?.para}</p>
             </div>
           );
         })}
       </section>
 
+      {/* adding the seprator */}
+      <div className="px-5 md:px-10">
+        <Separator />
+      </div>
+
+      {/* for sticky notes */}
+      <section className="my-10 px-10 space-y-5">
+        <h1 className="font-semibold text-lg">Skilled learned so far</h1>
+        <div className="flex items-center justify-center gap-10 flex-wrap">
+          <div className="px-4 py-2 w-fit shadow-sm shadow-yellow-800 rounded-xl">
+            📌 Branding
+          </div>
+          <div className="px-4 py-2 w-fit shadow-sm shadow-yellow-800 rounded-xl">
+            📌 Art of Teaching
+          </div>
+          <div className="px-4 py-2 w-fit shadow-sm shadow-yellow-800 rounded-xl">
+            📌 Public Speaking
+          </div>
+          <div className="px-4 py-2 w-fit shadow-sm shadow-yellow-800 rounded-xl">
+            📌 Marketing
+          </div>
+          <div className="px-4 py-2 w-fit shadow-sm shadow-yellow-800 rounded-xl">
+            📌 Management
+          </div>
+          <div className="px-4 py-2 w-fit shadow-sm shadow-yellow-800 rounded-xl">
+            📌 Tech Enthusiast
+          </div>
+          <div className="px-4 py-2 w-fit shadow-sm shadow-yellow-800 rounded-xl">
+            📌 Fitness
+          </div>
+        </div>
+      </section>
+
+      {/* adding the seprator */}
       <div className="px-5 md:px-10">
         <Separator />
       </div>
@@ -187,20 +229,20 @@ export default function Home() {
 
           {/* for videos and subscriber */}
           <div className="flex flex-col gap-5 md:w-1/3">
-            <div className="shadow-md shadow-gray-800 rounded-md p-2 flex items-center gap-5">
+            <div className="flex items-center gap-5">
               <UsersRound size={25} />
               <p className="font-medium text-lg">
                 {stats?.subscriberCount} Subscribers
               </p>
             </div>
-            <div className="shadow-md shadow-gray-800 rounded-md p-2 flex items-center gap-5">
+            <div className="flex items-center gap-5">
               <MonitorPlay size={25} />
               <p className="font-medium text-lg">
                 {stats?.videoCount} videos uploaded
               </p>
             </div>
             <div
-              className="g-ytsubscribe w-60"
+              className="g-ytsubscribe"
               data-channelid="UC8HuZC0pghWbpn4KrzKgRZA"
               data-layout="default"
               data-count="hidden"
@@ -261,7 +303,7 @@ export default function Home() {
       </section>
 
       {/* tools and technolgoies */}
-      <section className="flex flex-col items-center gap-10 px-10 my-20">
+      <section className="flex flex-col items-center justify-center gap-10 px-5 md:px-10 my-20">
         <div className="flex items-center gap-5">
           <Wrench className="w-10 h-10" />
           <h1 className="text-4xl font-bold">Tools and Technologies</h1>
@@ -281,7 +323,8 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="px-10 pt-20">
+      {/* adding the seprator */}
+      <div className="px-10">
         <Separator />
       </div>
 
@@ -289,7 +332,7 @@ export default function Home() {
         <div>
           <p> &#169; Copyright {year} - All right reserved.</p>
         </div>
-        <ul className="flex items-center gap-5">
+        <ul className="flex items-center flex-wrap gap-5">
           <li>
             <Link href="/contact">Contact</Link>
           </li>

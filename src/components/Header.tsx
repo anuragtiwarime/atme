@@ -26,6 +26,7 @@ const Header = () => {
     console.log("test");
   };
 
+  // for sticky navbar
   useEffect(() => {
     const handleScroll = () => {
       const scrolled = window.scrollY > window.innerHeight;
@@ -94,12 +95,7 @@ const Header = () => {
       {/* buttons menu */}
       <div className="items-center gap-5 hidden sm:flex">
         <Button variant="secondary">Blogs</Button>
-        <Button
-          variant="outline"
-          // className="bg-gradient-to-r from-red-500 to-purple-800 border-transparent transform hover:border-white transition-transform duration-300 ease-in-out text-white"
-        >
-          Recommendation
-        </Button>
+        <Button variant="outline">Recommendation</Button>
         <Button variant="outline">Let&#39;s Talk</Button>
         <Button variant="outline" size="icon">
           <Link href="#">
