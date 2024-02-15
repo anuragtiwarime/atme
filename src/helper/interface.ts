@@ -35,3 +35,13 @@ export interface IYoutubeVideoData {
     medium: IThumbnailData;
   };
 }
+
+interface IRecdItems {
+  productName: string;
+  productImageUrl: string;
+  productPurchaseUrl: string;
+}
+export interface IRecdProducts {
+  name: string;
+  items: IRecdItems[];
+}

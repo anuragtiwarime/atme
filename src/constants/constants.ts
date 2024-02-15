@@ -1,4 +1,9 @@
-import { IJourneyDetails, ISocialMedia, IToolsData } from "@/helper/interface";
+import {
+  IJourneyDetails,
+  IRecdProducts,
+  ISocialMedia,
+  IToolsData,
+} from "@/helper/interface";
 
 export const JourneyDetails: IJourneyDetails[] = [
   {
@@ -158,5 +163,100 @@ export const moreAboutSection = [
     icon: "/assets/moreDetails/techEnthusiast.png",
     heading: "Tech Enthusiast",
     para: "Enthusiastically coding, I stay updated on the latest tech trends, mastering new languages and market developments to continuously expand my expertise.",
+  },
+];
+
+export const recdProduct: IRecdProducts[] = [
+  {
+    name: "Books",
+    items: [
+      {
+        productName: "Rich Dad Poor Dad",
+        productImageUrl:
+          "https://m.media-amazon.com/images/W/MEDIAX_849526-T1/images/I/618d5bS2lUL.SX679.jpg",
+        productPurchaseUrl: "https://amzn.to/3SZeNwJ",
+      },
+      {
+        productName: "Rich Dad Poor Dad",
+        productImageUrl:
+          "https://m.media-amazon.com/images/W/MEDIAX_849526-T1/images/I/618d5bS2lUL.SX679.jpg",
+        productPurchaseUrl: "https://amzn.to/3SZeNwJ",
+      },
+      {
+        productName: "Rich Dad Poor Dad",
+        productImageUrl:
+          "https://m.media-amazon.com/images/W/MEDIAX_849526-T1/images/I/618d5bS2lUL.SX679.jpg",
+        productPurchaseUrl: "https://amzn.to/3SZeNwJ",
+      },
+    ],
+  },
+  {
+    name: "Tech Books",
+    items: [
+      {
+        productName: "Rich Dad Poor Dad",
+        productImageUrl:
+          "https://m.media-amazon.com/images/W/MEDIAX_849526-T1/images/I/618d5bS2lUL.SX679.jpg",
+        productPurchaseUrl: "https://amzn.to/3SZeNwJ",
+      },
+      {
+        productName: "Rich Dad Poor Dad",
+        productImageUrl:
+          "https://m.media-amazon.com/images/W/MEDIAX_849526-T1/images/I/618d5bS2lUL.SX679.jpg",
+        productPurchaseUrl: "https://amzn.to/3SZeNwJ",
+      },
+      {
+        productName: "Rich Dad Poor Dad",
+        productImageUrl:
+          "https://m.media-amazon.com/images/W/MEDIAX_849526-T1/images/I/618d5bS2lUL.SX679.jpg",
+        productPurchaseUrl: "https://amzn.to/3SZeNwJ",
+      },
+    ],
+  },
+  {
+    name: "Gadegest used by me",
+    items: [
+      {
+        productName: "Rich Dad Poor Dad",
+        productImageUrl:
+          "https://m.media-amazon.com/images/W/MEDIAX_849526-T1/images/I/618d5bS2lUL.SX679.jpg",
+        productPurchaseUrl: "https://amzn.to/3SZeNwJ",
+      },
+      {
+        productName: "Rich Dad Poor Dad",
+        productImageUrl:
+          "https://m.media-amazon.com/images/W/MEDIAX_849526-T1/images/I/618d5bS2lUL.SX679.jpg",
+        productPurchaseUrl: "https://amzn.to/3SZeNwJ",
+      },
+      {
+        productName: "Rich Dad Poor Dad",
+        productImageUrl:
+          "https://m.media-amazon.com/images/W/MEDIAX_849526-T1/images/I/618d5bS2lUL.SX679.jpg",
+        productPurchaseUrl: "https://amzn.to/3SZeNwJ",
+      },
+    ],
+  },
+  {
+    name: "Gadegest recommended by me",
+    items: [
+      {
+        productName: "Rich Dad Poor Dad",
+        productImageUrl:
+          "https://m.media-amazon.com/images/W/MEDIAX_849526-T1/images/I/618d5bS2lUL.SX679.jpg",
+        productPurchaseUrl: "https://amzn.to/3SZeNwJ",
+      },
+      {
+        productName: "Rich Dad Poor Dad",
+        productImageUrl:
+          "https://m.media-amazon.com/images/W/MEDIAX_849526-T1/images/I/618d5bS2lUL.SX679.jpg",
+        productPurchaseUrl: "https://amzn.to/3SZeNwJ",
+      },
+      {
+        productName: "Rich Dad Poor Dad",
+        productImageUrl:
+          "https://m.media-amazon.com/images/W/MEDIAX_849526-T1/images/I/618d5bS2lUL.SX679.jpg",
+        productPurchaseUrl: "https://amzn.to/3SZeNwJ",
+      },
+    ],
   },
 ];
