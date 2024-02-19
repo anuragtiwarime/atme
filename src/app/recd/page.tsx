@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -7,12 +9,22 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { recdProduct } from "@/constants/constants";
+import { ArrowLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
-const page = () => {
+const Recd = () => {
+  const router = useRouter();
   return (
-    <div className="m-5 md:m-10 space-y-10">
+    <div className="m-5 md:m-10 flex flex-col gap-10">
+      <Button
+        onClick={() => router.push("/")}
+        className="self-center flex items-center gap-2"
+      >
+        <ArrowLeft /> <span className="text-lg">Go to homepage</span>
+      </Button>
+
       {recdProduct.map((recd, index) => {
         return (
           <section key={index} className="space-y-2">
@@ -51,4 +63,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Recd;

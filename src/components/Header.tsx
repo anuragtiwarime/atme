@@ -1,6 +1,6 @@
 import { Button } from "./ui/button";
 import Link from "next/link";
-import { AtSign, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 import { useEffect, useState } from "react";
 import {
   Drawer,
@@ -10,21 +10,10 @@ import {
   DrawerHeader,
   DrawerTrigger,
 } from "./ui/drawer";
-import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const router = useRouter();
-
-  const handleMail = () => {
-    console.log("working");
-    router.push("mailto:anuragtiwari.me@gmail.com");
-  };
-
-  const test = () => {
-    console.log("test");
-  };
 
   // for sticky navbar
   useEffect(() => {
@@ -57,33 +46,46 @@ const Header = () => {
             <Menu />
           </DrawerTrigger>
           <DrawerContent className="mx-2">
-            <DrawerHeader className="space-y-2">
-              <Button variant="outline" className="flex justify-start">
-                Blogs
-              </Button>
-              <Button variant="outline" className="flex justify-start">
-                Recommendation
-              </Button>
-              <Button
-                onClick={test}
-                variant="outline"
-                className="flex justify-start"
+            <DrawerHeader className="grid grid-cols-2 place-items-center gap-5">
+              <Link
+                href={"https://blog.anuragtiwari.me/"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full"
               >
-                Let&#39;s Talk
-              </Button>
-
-              <Button
-                type="button"
-                onClick={handleMail}
-                variant="outline"
-                className="flex justify-start"
+                <Button variant="secondary" className="w-full">
+                  Blogs
+                </Button>
+              </Link>
+              <Link href="recd" className="w-full">
+                <Button variant="outline" className="w-full">
+                  Recommendation
+                </Button>
+              </Link>
+              <Link
+                href={"https://topmate.io/anuragtiwarime"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full"
               >
-                Mail me @
+                <Button variant="outline" className="w-full">
+                  Let&#39;s Talk
+                </Button>
+              </Link>
+              <Button variant="ghost" className="hover:bg-transparent">
+                <Link
+                  href="mailto:anuragtiwari.me@gmail.com?Subject=Let's%20Connect"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative text-[2.5rem]"
+                >
+                  📧
+                </Link>
               </Button>
             </DrawerHeader>
             <DrawerFooter>
               <DrawerClose>
-                <Button className="w-full" variant="secondary">
+                <Button className="w-full" variant="default">
                   Close
                 </Button>
               </DrawerClose>
@@ -94,12 +96,31 @@ const Header = () => {
 
       {/* buttons menu */}
       <div className="items-center gap-5 hidden sm:flex">
-        <Button variant="secondary">Blogs</Button>
-        <Button variant="outline">Recommendation</Button>
-        <Button variant="outline">Let&#39;s Talk</Button>
-        <Button variant="outline" size="icon">
-          <Link href="#">
-            <AtSign />
+        <Link
+          href={"https://blog.anuragtiwari.me/"}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button variant="secondary">Blogs</Button>
+        </Link>
+        <Link href="recd">
+          <Button variant="outline">Recommendation</Button>
+        </Link>
+        <Link
+          href={"https://topmate.io/anuragtiwarime"}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button variant="outline">Let&#39;s Talk</Button>
+        </Link>
+        <Button variant="ghost" className="hover:bg-transparent">
+          <Link
+            href="mailto:anuragtiwari.me@gmail.com?Subject=Let's%20Connect"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative text-[2.5rem]"
+          >
+            📧
           </Link>
         </Button>
       </div>

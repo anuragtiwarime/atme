@@ -54,32 +54,37 @@ export default function Home() {
       <Header />
 
       {/* main section */}
-      <section className="px-5 md:px-10 flex flex-col md:flex-row items-center gap-10 md:gap-20 my-5 md:my-10">
+      <section className="px-5 md:px-10 flex flex-col md:flex-row items-center gap-10 md:gap-20 my-10 md:my-20">
         <div className="rounded-full p-1 border-[2px] border-gray-400">
           <Image
             className="rounded-full"
             src="/assets/profile.jpeg"
             alt="profile"
-            width={600}
-            height={600}
+            width={800}
+            height={800}
           />
         </div>
 
         {/* for user description */}
-        <div className="space-y-5">
-          <div className="space-y-2">
+        <div className="space-y-10">
+          <div className="space-y-5">
             <h1 className="text-4xl sm:text-6xl font-bold">Anurag Tiwari</h1>
             <h4 className="text-lg sm:text-2xl font-semibold">
-              Manager | SDE - II | Mentorship | Technology Enthusiast | Speaker
+              Product / Program Manager || SDE - II || Mentorship || Speaker ||
+              Youtube || Tech Enthusiast || Fitness
             </h4>
           </div>
-          <div className="space-y-2 font-medium text-gray-300 text-sm sm:text-base">
+          <div className="space-y-5 font-medium text-gray-300 text-sm sm:text-base">
             <p>
-              Lead programmer with a track record of incorporating user and
-              business requirements into cost-effective, secure and
-              user-friendly solutions known for scalability and durability.
+              Lead Product Manager, I combine programming expertise with
+              strategic insight to deliver exceptional solutions. By integrating
+              business requirements, market analysis, and growth strategies, I
+              ensure each project is technically robust and drives tangible
+              value for all stakeholders.
             </p>
-            <p>I ❤️ To Code and Teach</p>
+            <p className="text-center">
+              I ❤️ to Develop Product, 👨🏻‍💻 Code & Mentorship 🎯
+            </p>
           </div>
         </div>
       </section>
@@ -93,7 +98,7 @@ export default function Home() {
       <section className="px-10 my-10 space-y-20">
         <div className="space-y-5">
           <h1 className="text-4xl font-bold text-center">Connect with me on</h1>
-          <p className="text-center font-serif">
+          <p className="text-center">
             Let&apos;s build a community of like-minded individuals! let&apos;s
             connect and grow together!
           </p>

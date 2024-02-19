@@ -22,7 +22,12 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <Script src="https://apis.google.com/js/platform.js" />
       </head>
-      <body className={inter.className}>{children} </body>
+      <body
+        className={`${inter.className} shadow-green-500 shadow-md my-5 rounded-md`}
+      >
+        {children}{" "}
+      </body>
+      {/* <body className="font-serif">{children} </body> */}
     </html>
   );
 }

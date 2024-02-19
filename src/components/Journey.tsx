@@ -17,7 +17,8 @@ const Journey = ({ journeyDetails, index, lastIndex }: IProp) => {
       {/* for dot and connecting line */}
       <div className="flex flex-col md:flex-row items-center w-full h-full">
         {/* dot */}
-        <div className="relative w-3 h-3 md:w-5 md:h-5 bg-gray-400 rounded-full">
+        <div className="relative flex items-center justify-center rounded-full">
+          📌
           {/* Job Details */}
           <div
             className={`absolute ${
